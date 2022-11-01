@@ -1,0 +1,32 @@
+Test Id,Type,Prerequisites,Step Details,Expected Result,Status
+QA-1,Add new People,," Click on People                   
+Click Add new people         
+Add unique id and email
+Click on Save changes","you should be redirect to new page with added user info     
+you can see new people added",Passed
+QA-2,Update People,should have already aded new people,"go to added people
+Click on Attribues
+click on Edit
+Edit Id
+Click on Save Changes",Id successfully changed and it is visible,Passed
+QA-3,Delete People,should have already aded new people,"go to added people
+Click on Options
+Select Delete forever
+Input amount, e. g : 1
+Click on Delete ",User should be deleted successfully ,Passed
+QA-4,Add Segment,,"Click on Segments
+Click on create Segment
+Input unique name 
+Input description(optional)
+Select Manual
+",Segment should be created successfully ,Passed
+QA-5,Update Segment,should have already created Segment,"got to existing Segment
+Click on Name
+Input new unique name
+Click on Save
+",Segment should successfully change name ,Passed
+QA-6,Delete Segment,should have already created Segment,"got to existing Segment
+Click on Options 
+Click on Delete Segment
+Click on yes, delete segment
+",Segment should be deleted successfully,Passed
