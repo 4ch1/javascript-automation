@@ -1,6 +1,4 @@
 
-//
-// -- This is a parent command --
 Cypress.Commands.add('login', () => {
     cy.visit("/login")
     cy.intercept('GET', '**/v1/accounts/current').as('currentAccount')
