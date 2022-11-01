@@ -5,7 +5,7 @@ describe('Login Page', () => {
     it('QA-1 -  Add new People', () => {
         cy.addPeople()
     })
-    it.only('QA-2 - Update People', () => {
+    it('QA-2 - Update People', () => {
         const randomId = Math.floor(new Date().getTime() / 1000).toString(12)
         const newRandomEmail = `${randomId}@gmail.com`
         cy.addPeople()

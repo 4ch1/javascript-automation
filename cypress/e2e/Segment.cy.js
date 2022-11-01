@@ -20,6 +20,5 @@ describe('Segment Page', () => {
         cy.get("li[class=fly-action-dropdown__item").contains("Delete Segment").click()
         cy.get("[type=button").contains("delete segment").should("be.visible").click()
         cy.wait("@deleteSegment")
-
     })
 })
