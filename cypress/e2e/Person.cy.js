@@ -15,7 +15,7 @@ describe('Login Page', () => {
         cy.get("[type=button").contains("Save Changes").should("be.visible").click()
         cy.get("h2").should("contain", newRandomEmail);
     })
-    it('QA-1 -  Delete People', () => {
+    it('QA-3 -  Delete People', () => {
         cy.intercept("**/customers/delete").as("deleteCostumer")
         cy.addPeople()
         cy.get("div[class=ember-basic-dropdown]").contains("Options").click()
@@ -24,6 +24,6 @@ describe('Login Page', () => {
         cy.get("[type=button").contains("Delete forever").should("be.visible").click()
         cy.wait("@deleteCostumer")
         cy.get("div[role=alert]")
-            .find("p").should("have.text", "The selected person will be deleted soon")
+            .find("p").should("contain.text", "The selected person will be deleted soon")
     })
 })
